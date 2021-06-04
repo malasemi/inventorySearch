@@ -1,0 +1,8 @@
+<Context>
+<Resource name="jdbc/Northwind"
+auth="Container" type='javax.sql.DataSource'
+maxActive="20" maxIdle="5" maxWait="10000"
+username="rdonly" password="purpleAvocado218"
+driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+url="jdbc:sqlserver://csci2469-01.czlyasswa9el.us-east-2.rds.amazonaws.com:1433;DatabaseName=Northwind" />
+</Context>

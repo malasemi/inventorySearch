@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+<h:head>
+<title>Product Search</title>
+<h:outputStylesheet library="css" name="style.css" />
+</h:head>
+<h:body id="main">
+<h1>Product Search by Price Range</h1>
+<h:form id="ProductSearch">
+<h:messages />
+
+<label>Enter price (lower bound): </label>
+<h:inputText id="LowerPrice" value="#{search.lower}" >
+	<f:validateDoubleRange minimum="0.0" maximum="1000.0" />
+</h:inputText><br/><br/>
+
+<label>Enter price (upper bound): </label>
+<h:inputText id="Height" value="#{search.upper}" >
+	<f:validateDoubleRange minimum="0.0" maximum="1000.0" />
+</h:inputText><br/><br/>
+
+<label>In Stock Only </label>
+<h:selectBooleanCheckbox id="InStockOnly" value="#{search.inStockOnly}" >
+</h:selectBooleanCheckbox><br/><br/>
+
+<label>Omit Discontinued </label>
+<h:selectBooleanCheckbox id="OmitDiscontinued" value="#{search.omitDiscontinued}" >
+</h:selectBooleanCheckbox><br/><br/>
+
+<h:commandButton id="submit" value="Submit" action="SearchResult" />
+</h:form>
+</h:body>
+</html>
